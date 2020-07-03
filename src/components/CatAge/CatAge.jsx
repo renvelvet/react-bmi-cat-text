@@ -47,7 +47,6 @@ function CatAge() {
   };
 
   return (
-    // <div>
     <Content>
       <Div>
         <Title>Cat Age Conversion</Title>
@@ -64,8 +63,6 @@ function CatAge() {
 
       <h1>{res}</h1>
     </Content>
-
-    // </div>
   );
 }
 export default CatAge;

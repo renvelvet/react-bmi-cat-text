@@ -54,7 +54,6 @@ function BMI() {
   };
 
   return (
-    // <div>
     <Content>
       <Div>
         <Title>BMI Calculator</Title>
@@ -75,8 +74,6 @@ function BMI() {
 
       <h1>{result}</h1>
     </Content>
-
-    // </div>
   );
 }
 

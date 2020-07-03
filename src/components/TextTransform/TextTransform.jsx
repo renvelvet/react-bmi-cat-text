@@ -51,7 +51,6 @@ function TextTransform() {
     setRes(finalStr);
   };
   return (
-    // <div>
     <Content>
       <Div>
         <Title>Text Transform App</Title>
@@ -68,8 +67,6 @@ function TextTransform() {
 
       <h1>{res}</h1>
     </Content>
-
-    // </div>
   );
 }
 export default TextTransform;
