@@ -34,7 +34,6 @@ function TextTransform() {
   const handleChangeText = (event) => {
     setTextInput(event.target.value);
   };
-  console.log(textInput);
 
   const check = () => {
     let str = textInput;

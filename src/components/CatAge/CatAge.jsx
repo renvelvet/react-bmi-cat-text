@@ -33,7 +33,6 @@ function CatAge() {
 
   const handleChangeCat = (event) => {
     setAge(event.target.value);
-    console.log(age);
   };
 
   const calAge = () => {

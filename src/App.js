@@ -29,6 +29,9 @@ function App() {
           <Route exact path="/texttransform">
             <TextTransform />
           </Route>
+          <Route path="*">
+            <BMI />
+          </Route>
         </Switch>
       </Router>
     </div>

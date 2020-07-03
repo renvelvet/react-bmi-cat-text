@@ -38,7 +38,6 @@ function BMI() {
   const handleChange = (event) => {
     setbmi({ ...bmi, [event.target.name]: event.target.value });
   };
-  console.log(bmi);
   const calculate = () => {
     let res = bmi.weight / (Math.pow(bmi.height, 2) * 0.0001);
     if (res < 17.0) {
