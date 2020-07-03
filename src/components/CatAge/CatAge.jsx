@@ -34,19 +34,18 @@ function CatAge() {
 
   const handleChangeCat = (event) => {
     setAge(event.target.value);
+    console.log(age);
   };
-  console.log(age);
 
   const calAge = () => {
-    if (age === 1) {
+    if (age == 1) {
       setRes(15);
       console.log(res);
-    } else if (age === 2) {
+    } else if (age == 2) {
       setRes(24);
     } else if (age >= 3) {
       setRes(24 + (age - 2) * 4);
     }
-    console.log(res);
   };
 
   return (
@@ -55,12 +54,14 @@ function CatAge() {
       <Div>
         <Title>Cat Age Conversion</Title>
         <Input
-          type="text"
+          type="number"
           name="age"
           placeholder="Cat Age"
           onChange={handleChangeCat}
         />
-        <Button onClick={calAge}>Enter</Button>
+        <Button type="button" onClick={calAge}>
+          Enter
+        </Button>
       </Div>
 
       <h1>{res}</h1>
