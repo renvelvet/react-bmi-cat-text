@@ -29,20 +29,24 @@ const Button = styled.button`
 `;
 
 function CatAge() {
-  const [result, setresult] = useState(0);
-  const [age, setage] = useState(0);
+  const [res, setRes] = useState(0);
+  const [age, setAge] = useState(0);
 
-  const handleChange = (event) => {
-    setage(event.target.value);
+  const handleChangeCat = (event) => {
+    setAge(event.target.value);
   };
-  const calculate = () => {
+  console.log(age);
+
+  const calAge = () => {
     if (age === 1) {
-      setresult(15);
+      setRes(15);
+      console.log(res);
     } else if (age === 2) {
-      setresult(24);
+      setRes(24);
     } else if (age >= 3) {
-      setresult(24 + (age - 2) * 4);
+      setRes(24 + (age - 2) * 4);
     }
+    console.log(res);
   };
 
   return (
@@ -54,12 +58,12 @@ function CatAge() {
           type="text"
           name="age"
           placeholder="Cat Age"
-          onChange={handleChange}
+          onChange={handleChangeCat}
         />
-        <Button onClick={calculate}>Enter</Button>
+        <Button onClick={calAge}>Enter</Button>
       </Div>
 
-      <h1>{result}</h1>
+      <h1>{res}</h1>
     </Content>
 
     // </div>

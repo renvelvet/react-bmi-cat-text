@@ -1,7 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
+
+import styled from "styled-components";
+const Content = styled.div`
+  margin: 150px;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+`;
+const Title = styled.p`
+  font-size: 22px;
+`;
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+`;
+const Input = styled.input`
+  border: 0;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #ffa;
+  margin: 10px;
+`;
+const Button = styled.button`
+  background: purple;
+  color: white;
+  font-size: 20px;
+`;
 
 function TextTransform() {
-  return <div></div>;
-}
+  const [res, setRes] = useState(0);
+  const [age, setAge] = useState(0);
 
+  const handleChangeCat = (event) => {
+    setAge(event.target.value);
+  };
+  console.log(age);
+
+  const calAge = () => {
+    if (age === 1) {
+      setRes(15);
+      console.log(res);
+    } else if (age === 2) {
+      setRes(24);
+    } else if (age >= 3) {
+      setRes(24 + (age - 2) * 4);
+    }
+    console.log(res);
+  };
+
+  return (
+    // <div>
+    <Content>
+      <Div>
+        <Title>Text Transform App</Title>
+        <Input
+          type="text"
+          name="age"
+          placeholder="Input Your Text Here"
+          onChange={handleChangeCat}
+        />
+        <Button onClick={calAge}>Enter</Button>
+      </Div>
+
+      <h1>{res}</h1>
+    </Content>
+
+    // </div>
+  );
+}
 export default TextTransform;
