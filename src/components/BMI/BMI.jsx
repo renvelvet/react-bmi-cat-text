@@ -13,7 +13,6 @@ const Title = styled.p`
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
   align-items: center;
 `;
 const Input = styled.input`
@@ -61,13 +60,13 @@ function BMI() {
       <Div>
         <Title>BMI Calculator</Title>
         <Input
-          type="text"
+          type="number"
           name="height"
           placeholder="Height in cm"
           onChange={handleChange}
         />
         <Input
-          type="text"
+          type="number"
           name="weight"
           placeholder="Weight in kg"
           onChange={handleChange}

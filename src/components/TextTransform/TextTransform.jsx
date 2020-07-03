@@ -12,7 +12,6 @@ const Title = styled.p`
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
   align-items: center;
 `;
 const Input = styled.input`
@@ -29,26 +28,29 @@ const Button = styled.button`
 `;
 
 function TextTransform() {
-  const [res, setRes] = useState(0);
-  const [age, setAge] = useState(0);
+  const [res, setRes] = useState("");
+  const [textInput, setTextInput] = useState("");
 
-  const handleChangeCat = (event) => {
-    setAge(event.target.value);
+  const handleChangeText = (event) => {
+    setTextInput(event.target.value);
   };
-  console.log(age);
+  console.log(textInput);
 
-  const calAge = () => {
-    if (age === 1) {
-      setRes(15);
-      console.log(res);
-    } else if (age === 2) {
-      setRes(24);
-    } else if (age >= 3) {
-      setRes(24 + (age - 2) * 4);
-    }
-    console.log(res);
+  const check = () => {
+    let str = textInput;
+
+    let strArray = str.split("");
+    let finalStr = strArray.map((char) => {
+      if (/[a-z]/.test(char)) {
+        char = char.toUpperCase();
+      } else {
+        char = char.toLowerCase();
+      }
+      return char;
+    });
+    finalStr = finalStr.join("");
+    setRes(finalStr);
   };
-
   return (
     // <div>
     <Content>
@@ -56,11 +58,13 @@ function TextTransform() {
         <Title>Text Transform App</Title>
         <Input
           type="text"
-          name="age"
+          name="textInput"
           placeholder="Input Your Text Here"
-          onChange={handleChangeCat}
+          onChange={handleChangeText}
         />
-        <Button onClick={calAge}>Enter</Button>
+        <Button type="button" onClick={check}>
+          Enter
+        </Button>
       </Div>
 
       <h1>{res}</h1>

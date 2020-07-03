@@ -12,7 +12,6 @@ const Title = styled.p`
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
   align-items: center;
 `;
 const Input = styled.input`
@@ -38,10 +37,10 @@ function CatAge() {
   };
 
   const calAge = () => {
-    if (age == 1) {
+    if (age === "1") {
       setRes(15);
       console.log(res);
-    } else if (age == 2) {
+    } else if (age === "2") {
       setRes(24);
     } else if (age >= 3) {
       setRes(24 + (age - 2) * 4);
