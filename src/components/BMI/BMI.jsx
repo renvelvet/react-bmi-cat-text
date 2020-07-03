@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Content = styled.div`
-  margin: 150px;
+  margin: 50px;
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
 `;
